@@ -5,11 +5,114 @@
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
-  <title>Geometry SPa</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css"
+        rel="stylesheet"
+        type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Geometry SPA</title>
 </head>
 
 <body>
+  <!-- //main container-1 -->
+  <main class="flex flex-col lg:flex-row">
+    <!-- shape container -->
+    <div class=" m-5 flex-1 grid grids-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- triangle -->
+      <div class="card bg-base-100 shadow-xl">
+        <figure><img src="images/triangle.png"
+               alt="triangle" /></figure>
+        <div class="card-body items-center	">
+          <h2 class="card-title text-center">Triangle</h2>
+          <p>Area (A)= .05 X b X h</p>
+          <span class="flex gap-2 flex-col lg:flex-row ">
+            <input type="text"
+                   name=""
+                   placeholder="Input Height"
+                   id="height-tri"
+                   class=" input input-bordered input-primary w-full max-w-xs">
+            <input type="text"
+                   name=""
+                   placeholder="Input Base"
+                   id="base-tri"
+                   class=" input input-bordered input-primary w-full max-w-xs">
+          </span>
+          <p>Area (A) = <span id="area-tri"> 00 </span> cm <sup>2</sup></p>
+          <div class="card-actions justify-center">
+            <button class="btn btn-primary"
+                    onclick="areaTriangle()">Calculate</button>
+          </div>
+        </div>
+      </div>
+      <!-- Rectangle -->
+      <div class="card bg-base-100 shadow-xl">
+        <figure><img src="images/rectangle.png"
+               alt="Rectangle" /></figure>
+        <div class="card-body items-center	">
+          <h2 class="card-title text-center">Rectangle</h2>
+          <p>Area (A)=W X I</p>
+          <span class="flex gap-2 flex-col lg:flex-row ">
+            <input type="text"
+                   name=""
+                   placeholder="Input Height"
+                   id="height-Rec"
+                   class=" input input-bordered input-primary w-full max-w-xs">
+            <input type="text"
+                   name=""
+                   placeholder="Input Base"
+                   id="base-Rec"
+                   class=" input input-bordered input-primary w-full max-w-xs">
+          </span>
+          <p>Area (A) = <span id="area-Rec"> 00 </span> cm <sup>2</sup></p>
+          <div class="card-actions justify-center">
+            <button class="btn btn-primary"
+                    onclick="areaReactangle()">Calculate</button>
+          </div>
+        </div>
+      </div>
 
+      <!-- Parallelogram -->
+      <div class="card bg-base-100 shadow-xl">
+        <figure><img src="images/parallelogram.png"
+               alt="Parallelogram" /></figure>
+        <div class="card-body items-center	">
+          <h2 class="card-title text-center">Parallelogram</h2>
+          <p>Area (A)= b X h</p>
+          <span class="flex gap-2 flex-col lg:flex-row ">
+            <input type="text"
+                   name=""
+                   placeholder="Input Height"
+                   id="height-Par"
+                   class=" input input-bordered input-primary w-full max-w-xs">
+            <input type="text"
+                   name=""
+                   placeholder="Input Base"
+                   id="base-Par"
+                   class=" input input-bordered input-primary w-full max-w-xs">
+          </span>
+          <p>Area (A) = <span id="area-Par"> 00 </span> cm <sup>2</sup></p>
+          <div class="card-actions justify-center">
+            <button class="btn btn-primary"
+                    onclick="areaParallelogram()">Calculate</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-96 border-2 border-gray-700 rounded-md">
+      <h3 class="text-3xl text-center p-4">Area Calculator</h3>
+      <div id="dashboard-calculation">
+
+      </div>
+
+    </div>
+
+
+
+    </div>
+
+
+  </main>
+  <script src="script/calculation.js"></script>
 </body>
 
 </html>
